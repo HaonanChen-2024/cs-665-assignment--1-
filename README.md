@@ -1,16 +1,16 @@
 
 | CS-665       | Software Design & Patterns |
 |--------------|----------------------------|
-| Name         | FIRST_NAME LAST_NAME       |
-| Date         | MM/DD/YYYY                 |
-| Course       | Fall / Spring / Summer     |
-| Assignment # |                            |
+| Name         | SUDTIDA THUMSITHI          |
+| Date         | 03/18/2024                 |
+| Course       | Spring                     |
+| Assignment # | 4                          |
 
 # Assignment Overview
 Please add a paragraph or two overviewing the objectives of the assignment.
 
 # GitHub Repository Link:
-https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
+https://github.com/jlibi/CS-665-assignment-4
 
 # Implementation Description 
 
