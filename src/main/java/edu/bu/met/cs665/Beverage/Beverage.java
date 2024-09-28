@@ -32,18 +32,21 @@ public class Beverage {
     public int addMilk(){
         int milk = 0;
         input = new Scanner(System.in);
-        System.out.println("Do you want to add extra milk to " + this.name + "? Yes(1)/No(0)" );
+        System.out.println("Do you want to add extra milk(0.3$/add) to " + this.name + "? Yes(1)/No(0)" );
 
         while (true) {
             int choice = input.nextInt();
             if (choice == 1) {
                 System.out.println("Enter milk amount(From 1 to 3): ");
-                milk = input.nextInt();
-                if (milk > 3 || milk < 1) {
-                    System.out.println("Invalid milk amount,please try again");
-                } else {
-                    this.price += milk*0.3;
-                    return milk;
+                while (true) {
+                    milk = input.nextInt();
+                    if (milk > 3 || milk < 1) {
+                        System.out.println("Invalid milk amount,please try again");
+                    } else {
+                        System.out.println(milk + " unit of milk has been added"); ;
+                        this.price += milk * 0.3;
+                        return milk;
+                    }
                 }
             } else if (choice == 0) {
                 return 0;
@@ -57,17 +60,20 @@ public class Beverage {
         int sugar = 0;
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Do you want to add extra sugar to " + this.name + "? Yes(1)/No(0)");
+        System.out.println("Do you want to add extra sugar(0.2$/add) to " + this.name + "? Yes(1)/No(0)");
         while (true) {
             int choice = input.nextInt();
             if (choice == 1) {
                 System.out.println("Enter sugar amount (Between 1 to 3): ");
-                sugar = input.nextInt();
-                if (sugar > 3 || sugar < 1) {
-                    System.out.println("Invalid sugar amount, please try again.");
-                } else {
-                    this.price += sugar*0.2;
-                    return sugar;
+                while (true) {
+                    sugar = input.nextInt();
+                    if (sugar > 3 || sugar < 1) {
+                        System.out.println("Invalid sugar amount, please try again.");
+                    } else {
+                        System.out.println(sugar + " unit of sugar has been added");
+                        this.price += sugar * 0.2;
+                        return sugar;
+                    }
                 }
             } else if (choice == 0) {
                 return 0;

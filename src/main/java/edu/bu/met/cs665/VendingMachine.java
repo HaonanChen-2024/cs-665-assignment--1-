@@ -19,12 +19,12 @@ public class VendingMachine {
     public void selectBeverage() {
         Scanner input = new Scanner(System.in);
         System.out.println("Please select a beverage:");
-        System.out.println("1. Espresso");
-        System.out.println("2. Americano");
-        System.out.println("3. Latte Macchiato");
-        System.out.println("4. Black Tea");
-        System.out.println("5. Green Tea");
-        System.out.println("6. Yellow Tea");
+        System.out.println("1. Espresso(2.5$)");
+        System.out.println("2. Americano(3.0$)");
+        System.out.println("3. Latte Macchiato(6$)");
+        System.out.println("4. Black Tea(2.0$)");
+        System.out.println("5. Green Tea(3.0$)");
+        System.out.println("6. Yellow Tea(2.0$)");
 
         int choice = input.nextInt();
         switch (choice) {
