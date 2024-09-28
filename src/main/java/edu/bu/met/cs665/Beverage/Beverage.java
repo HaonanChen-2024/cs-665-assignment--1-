@@ -55,22 +55,22 @@ public class Beverage {
 
     public int addSugar() {
         int sugar = 0;
-        Scanner input = new Scanner(System.in);  // 初始化 Scanner
+        Scanner input = new Scanner(System.in);
 
         System.out.println("Do you want to add extra sugar to " + this.name + "? Yes(1)/No(0)");
         while (true) {
-            int choice = input.nextInt();  // 读取用户输入
+            int choice = input.nextInt();
             if (choice == 1) {
                 System.out.println("Enter sugar amount (Between 1 to 3): ");
-                sugar = input.nextInt();  // 读取糖的数量
-                if (sugar > 3 || sugar < 1) {  // 检查糖的数量是否在 1 到 3 之间
+                sugar = input.nextInt();
+                if (sugar > 3 || sugar < 1) {
                     System.out.println("Invalid sugar amount, please try again.");
                 } else {
                     this.price += sugar*0.2;
-                    return sugar;  // 返回有效的糖的数量
+                    return sugar;
                 }
-            } else if (choice == 2) {  // 如果用户选择 2 表示不加糖
-                return 0;  // 返回 0 表示没有加糖
+            } else if (choice == 0) {
+                return 0;
             } else {
                 System.out.println("Invalid input, please try again.");
             }
