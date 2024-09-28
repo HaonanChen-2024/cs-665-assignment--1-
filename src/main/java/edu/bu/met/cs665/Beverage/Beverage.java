@@ -100,18 +100,6 @@ public class Beverage {
         this.price = price;
     }
 
-    public int getMilk() {
-        return milk;
-    }
-    public void setMilk(int milk) {
-        this.milk = milk;
-    }
-    public int getSugar() {
-        return sugar;
-    }
-    public void setSugar(int sugar) {
-        this.sugar = sugar;
-    }
 
 
 }

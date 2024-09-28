@@ -7,7 +7,7 @@
 | Assignment # | 1                          |
 
 # Assignment Overview
-Please add a paragraph or two overviewing the objectives of the assignment.
+In this assignment, the goal is to develop a fully automated beverage vending machine software system. The system allows users to select various beverages such as Espresso, Americano, Latte Macchiato, Black Tea, Green Tea, and Yellow Tea, and customize their drinks by adding extra condiments like milk and sugar. The beverage creation process is handled using a design pattern approach, where the brewing process is abstracted through the BrewBehavior interface, and its specific implementations handle different brewing steps like adding water, milk, foam, or espresso.
 
 # GitHub Repository Link:
 https://github.com/HaonanChen-2024/cs-665-assignment--1-
@@ -16,14 +16,20 @@ https://github.com/HaonanChen-2024/cs-665-assignment--1-
 
 
 For each assignment, please answer the following:
+1.The vending machine allows users to select a beverage from options such as Espresso, Americano, and Latte Macchiato. Users can then choose to add condiments like milk and sugar, and the cost of each condiment is automatically added to the final price. This feature is handled through addMilk() and addSugar() methods in the Beverage class, ensuring flexibility for any type of condiment.
 
-- Explain the level of flexibility in your implementation, including how new object types can
-be easily added or removed in the future.
-- Discuss the simplicity and understandability of your implementation, ensuring that it is
-easy for others to read and maintain.
-- Describe how you have avoided duplicated code and why it is important.
-- If applicable, mention any design patterns you have used and explain why they were
-chosen.
+2.The entire beverage preparation process is managed through a series of brewing steps using the BrewBehavior interface. Each specific brewing behavior, such as adding water or brewing espresso, is encapsulated in classes like BrewWater and BrewEspresso. This modular approach allows for easy updates and maintenance of the brewing logic.
+
+3.The project follows a clear object-oriented design using classes and methods to simulate the real-world behavior of a vending machine. Each beverage type is represented as a subclass of Beverage, while brewing behaviors are implemented using the Strategy Pattern, ensuring clean separation of concerns and flexibility in future extensions.
+
+4.The Strategy Pattern is used to define various brewing behaviors, making the brewing process reusable and flexible. For example, both Americano and Espresso share the BrewEspresso behavior but can differ in the number of times water is added. This design enables easy updates or modifications to the brewing steps for any beverage without impacting others.
+
+5.The program is designed to easily accommodate new beverages. By creating a new subclass of Beverage and adding the appropriate BrewBehavior combinations, new drinks can be introduced without changing the core functionality. This ensures that the design is scalable for future needs.
+
+6.The use of base classes such as Beverage and interfaces like BrewBehavior ensures minimal code duplication. Common functionalities such as brewing steps are reused across different drink types, making the code more maintainable and easier to extend.
+
+7.Although detailed payment processing is not fully implemented, the program accepts any numerical input as payment, and the final price is calculated based on the beverage and condiments selected. 
+
 
 
 # Maven Commands
@@ -41,10 +47,21 @@ Maven also integrates with other development tools, such as IDEs and continuous 
 Maven provides a large number of plugins for various tasks, such as compiling code, running tests, generating reports, and creating JAR files. This makes it a versatile tool that can be used for many different types of Java projects.
 
 ## Compile
-Type on the command line: 
+The project uses Maven to manage dependencies and build the project. Ensure Maven is installed on your system, then run the following command to compile the code:
 
 ```bash
 mvn clean compile
+```
+
+## Packaging
+```bash
+mvn package
+```
+
+## Running the Application
+After compiling, you can run the main application from the command line:
+```bash
+java -classpath target/JavaProjectTemplate-1.0-SNAPSHOT.jar edu.bu.met.cs665.Main
 ```
 
 
@@ -62,7 +79,7 @@ JUnit tests can be run as part of a continuous integration pipeline, where tests
 
 To run, use the following command:
 ```bash
-mvn clean test
+mvn test
 ```
 
 

@@ -5,6 +5,8 @@ import edu.bu.met.cs665.Beverage.*;
 import java.util.Scanner;
 
 public class VendingMachine {
+
+
     private Beverage selectedBeverage;
 
     public void start() {
@@ -62,4 +64,12 @@ public class VendingMachine {
         // 加糖
         selectedBeverage.sugar = selectedBeverage.addSugar();
     }
+    public Beverage getSelectedBeverage() {
+        return selectedBeverage;
+    }
+
+    public void setSelectedBeverage(Beverage selectedBeverage) {
+        this.selectedBeverage = selectedBeverage;
+    }
+
 }
